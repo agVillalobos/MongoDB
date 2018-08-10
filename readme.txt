@@ -10,3 +10,5 @@ crear folder en C:
 
 Ejecutar el proceso que esta en:
 	- C:\Program Files\MongoDB\Server\3.6\binmongod.exe para levantar mongo.
+	
+	asd
