@@ -1,0 +1,26 @@
+Insert a single document
+    db.inventory.insertOne(
+        { item: "canvas", qty: 100, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm" } }
+    )
+
+    db.inventory.find( { item: "canvas" } )
+
+Insert multiple documents
+    db.inventory.insertMany([
+   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+   { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+   { item: "mousepad", qty: 25, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } }
+    ])
+
+    db.inventory.find( {} )
+
+Insert
+    db.products.insert( { _id: 10, item: "box", qty: 20 } ))
+    db.products.insert(
+   [
+     { _id: 20, item: "lamp", qty: 50, type: "desk" },
+     { _id: 21, item: "lamp", qty: 20, type: "floor" },
+     { _id: 22, item: "bulk", qty: 100 }
+   ],
+   { ordered: false }
+    )
